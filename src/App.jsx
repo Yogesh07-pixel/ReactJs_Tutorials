@@ -7,14 +7,24 @@ function App() {
   let [counter, setCounter] = useState(15);
 
   const addValue = () => {
-    counter = counter + 1;
-    setCounter(counter);
+    // counter = counter + 1
+    if(counter + 1 > 20){
+      alert("Limit Exceeded");
+    }
+    else{
+    setCounter(counter + 1);
+    }
     // console.log("Clicked", counter);
   };
 
   const SubValue = () => {
-    counter = counter - 1;
-    setCounter(counter);
+    // counter = counter - 1;
+    if( counter -1 < 0){
+      alert("This is the minimum Value cannot decrease further");
+    }
+    else{
+      setCounter(counter - 1);
+    }
     // console.log("Clicked", counter);
   };
 
